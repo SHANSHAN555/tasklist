@@ -1,4 +1,4 @@
-package models;
+package controllers;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class EditServlet
+ * Servlet implementation class ShowServlet
  */
-@WebServlet("/edit")
-public class EditServlet extends HttpServlet {
+@WebServlet("/show")
+public class ShowServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EditServlet() {
+    public ShowServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

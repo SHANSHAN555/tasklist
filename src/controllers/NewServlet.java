@@ -1,4 +1,4 @@
-package models;
+package controllers;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class IndexServlet
+ * Servlet implementation class NewServlet
  */
-@WebServlet("/index")
-public class IndexServlet extends HttpServlet {
+@WebServlet("/new")
+public class NewServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public IndexServlet() {
+    public NewServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

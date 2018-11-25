@@ -1,4 +1,4 @@
-package models;
+package controllers;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class DestroyServlet
+ * Servlet implementation class CreateServlet
  */
-@WebServlet("/destroy")
-public class DestroyServlet extends HttpServlet {
+@WebServlet("/create")
+public class CreateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DestroyServlet() {
+    public CreateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
