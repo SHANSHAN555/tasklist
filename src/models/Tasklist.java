@@ -1,5 +1,4 @@
 package models;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,11 +16,31 @@ import javax.persistence.Table;
             )
 })
 @Table(name = "tasks")
-public class Kadailist {
+public class Tasklist {
     @Id
-    @Column(name = "content", nullable=false)
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = "name", nullable=false)
+    private String name;
+
+    @Column(name = "content", nullable=false)
     private String content;
+
+    public Integer getId(){
+        return this.id;
+    }
+    public void setId(Integer id){
+        this.id = id;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
 
     public String getContent(){
         return this.content;
@@ -29,4 +48,5 @@ public class Kadailist {
     public void setContent(String content){
         this.content = content;
     }
+
 }
