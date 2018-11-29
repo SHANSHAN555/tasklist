@@ -17,9 +17,7 @@
                 ${param.content}
             </div>
             </div>
-            <div id="footer">
-                by ken
-            </div>
+
         </div>
 
     </body>
