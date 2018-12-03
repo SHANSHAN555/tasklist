@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.Tasklist;
+import models.Task;
 import utils.DBUtil;
 
 /**
@@ -35,7 +35,7 @@ public class UpdateServlet extends HttpServlet {
 	    if(_token != null && _token.equals(request.getSession().getId())){
 	        EntityManager em = DBUtil.createEntityManager();
 
-	        Tasklist tk = em.find(Tasklist.class,request.getSession().getAttribute("tasklist_id"));
+	        Task tk = em.find(Task.class,request.getSession().getAttribute("task_id"));
 
 	        String name = request.getParameter("name");
 	        tk.setName(name);
@@ -49,7 +49,7 @@ public class UpdateServlet extends HttpServlet {
 	        request.getSession().setAttribute("flush", "更新完了");
 	        em.close();
 
-	        request.getSession().removeAttribute("tasklist_id");
+	        request.getSession().removeAttribute("task_id");
 	        response.sendRedirect(request.getContextPath() + "/index");
 
 	    }

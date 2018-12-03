@@ -1,4 +1,5 @@
 package models;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,12 +12,13 @@ import javax.persistence.Table;
 @Entity
 @NamedQueries({
     @NamedQuery(
-            name = "AllTasklists",
-            query = "select t from Tasklist as t"
+            name = "AllTasks",
+            query = "select t from Task as t order by t.id desc"
             )
 })
 @Table(name = "tasks")
-public class Tasklist {
+
+public class Task {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -13,7 +13,7 @@
         <div id="wrapper">
             <div id="header">
                 <h1>タスク一覧</h1>
-            <div id="conetnt">
+            <div id="content">
                 ${param.content}
             </div>
             </div>

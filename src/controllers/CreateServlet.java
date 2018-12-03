@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import models.Tasklist;
+import models.Task;
 import utils.DBUtil;
 /**
  * Servlet implementation class CreateServlet
@@ -34,7 +34,7 @@ public class CreateServlet extends HttpServlet {
 	    if(_token != null && _token.equals(request.getSession().getId())){
 	        EntityManager em = DBUtil.createEntityManager();
 
-	        Tasklist tk = new Tasklist();
+	        Task tk = new Task();
 	        String name = request.getParameter("name");
 	        tk.setName(name);
 
